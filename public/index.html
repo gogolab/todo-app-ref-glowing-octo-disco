@@ -5,11 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Boilerplate</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Todo App</title>
 </head>
 
 <body>
-  <h1>Boilerplate</h1>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">Todo App</h1>
+      <h2 class="header__subtitle">What do you need to</h2>
+    </div>
+  </header>
+  <div class="actions">
+    <div class="actions__container">
+      <input id="filter-todos" class="input" placeholder="filter todos" type="text">
+      <label class="checkbox">
+        <input type="checkbox" id="hideCompleted" name="hideCompleted"> Hide completed todos
+      </label>
+    </div>
+  </div>
+  <div class="container">
+    <div id="todos"></div>
+    <form id="addTodo">
+      <input id="addTodo__text" class="input" type="text" placeholder="new todo">
+      <button id="addTodo__submit" class="btn button">Add Todo</button>
+    </form>
+  </div>
+
   <script src="./scripts/bundle.js"></script>
 </body>
 

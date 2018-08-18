@@ -1,3 +1,5 @@
+import cuid from "cuid";
+
 let todos = [];
 
 const loadTodos = () => {
@@ -19,7 +21,11 @@ const getTodos = () => {
 };
 
 const createTodo = text => {
-    console.log(text);
+    todos.push({
+        id: cuid(),
+        text,
+        completed: false
+    });
 };
 
 const removeTodo = id => {
