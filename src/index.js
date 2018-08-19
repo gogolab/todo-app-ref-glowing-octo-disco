@@ -16,8 +16,10 @@ document
     .addEventListener("change", function(e) {
         e.preventDefault();
 
+        console.log(e.target);
+
         setFilters({
-            hideCompleted: e.target.value
+            hideCompleted: e.target.checked
         });
 
         renderTodos();
